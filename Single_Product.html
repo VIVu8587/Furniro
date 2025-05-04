@@ -38,6 +38,76 @@
         height: 30px;
         object-fit: contain;
       }
+      .thumbnail-img {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+      }
+      .main-img {
+        width: 100%;
+        border-radius: 10px;
+      }
+      .color-swatch {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 10px;
+        cursor: pointer;
+        border: 2px solid #ccc;
+      }
+      .size-btn {
+        margin-right: 5px;
+        border-radius: 5px;
+      }
+      .btn-outline-dark:hover {
+        background-color: #000;
+        color: #fff;
+      }
+      .product-details {
+        font-size: 14px;
+      }
+      @media (max-width: 768px) {
+        .thumbnail-img {
+          width: 50px;
+          height: 50px;
+        }
+        .input-group {
+          width: 100px !important;
+          margin-bottom: 10px;
+        }
+        .main-img {
+          margin-top: 15px;
+        }
+        .text-md-start {
+          text-align: center !important;
+        }
+      }
+      .tab-content {
+        padding-top: 20px;
+      }
+      .tab-pane img {
+        width: 100%;
+        border-radius: 10px;
+      }
+      .tab-pane p {
+        font-size: 15px;
+        color: #555;
+      }
+      .nav-tabs .nav-link {
+        color: #666;
+        font-weight: 500;
+        border: none;
+        border-bottom: 2px solid transparent;
+      }
+      .nav-tabs .nav-link.active {
+        color: #000;
+        border-color: #000;
+      }
       .footer {
         background-color: #f8f9fa;
         padding: 40px 20px;
@@ -73,6 +143,10 @@
         background: transparent;
         font-weight: bold;
         margin-left: 10px;
+      }
+      .breadcrumb-item a {
+        text-decoration: none;
+        color: #9f9f9f;
       }
       .footer-bottom {
         border-top: 1px solid #dee2e6;
@@ -175,7 +249,241 @@
       </div>
     </nav>
 
-    This is songle_Product.
+    <div class="container py-5">
+      <!-- Breadcrumb -->
+      <nav style="background-color: #f9f1e7; margin: 10px; padding-bottom: 5px">
+        <ol class="breadcrumb bg-transparent p-0 mb-4">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item"><a href="#">Shop</a></li>
+          <li class="breadcrumb-item active" aria-current="page">
+            Asgaard sofa
+          </li>
+        </ol>
+      </nav>
+
+      <!-- Product Section -->
+      <div class="row">
+        <!-- Images -->
+        <div
+          class="col-lg-6 d-flex flex-column flex-md-row justify-content-center align-items-center"
+        >
+          <div
+            class="d-flex flex-md-column me-md-3 mb-3 mb-md-0 justify-content-center align-items-center"
+          >
+            <img
+              src="images/single_product/small_pro1.png"
+              class="thumbnail-img"
+              alt="thumb"
+            />
+            <img
+              src="images/single_product/small_pro2.png"
+              class="thumbnail-img"
+              alt="thumb"
+            />
+            <img
+              src="images/single_product/small_pro3.png"
+              class="thumbnail-img"
+              alt="thumb"
+            />
+            <img
+              src="images/single_product/small_pro4.png"
+              class="thumbnail-img"
+              alt="thumb"
+            />
+          </div>
+          <div class="flex-fill text-center text-md-start">
+            <img
+              src="images/single_product/big_pro1.png"
+              class="main-img"
+              alt="main product"
+            />
+          </div>
+        </div>
+
+        <!-- Product Info -->
+        <div class="col-lg-6 mt-4 mt-md-0 text-center text-md-start">
+          <h3>Asgaard sofa</h3>
+          <h5 class="text-muted">Rs. 250,000.00</h5>
+          <div
+            class="d-flex justify-content-center justify-content-md-start align-items-center mb-2"
+          >
+            <div class="text-warning me-2">★★★★★</div>
+            <span class="text-muted small">5 Customer Review</span>
+          </div>
+          <p class="product-details">
+            Setting the bar as one of the loudest speakers in its class, the
+            Kilburn is a compact, stout-hearted hero with a well-balanced audio
+            which boosts a clear midrange and extended highs for a sound.
+          </p>
+
+          <!-- Size -->
+          <div class="mb-3">
+            <label class="fw-bold d-block mb-1">Size</label>
+            <div
+              class="d-flex justify-content-center justify-content-md-start flex-wrap"
+            >
+              <button class="btn btn-outline-secondary size-btn active">
+                L
+              </button>
+              <button class="btn btn-outline-secondary size-btn">XL</button>
+              <button class="btn btn-outline-secondary size-btn">XS</button>
+            </div>
+          </div>
+
+          <!-- Color -->
+          <div class="mb-3">
+            <label class="fw-bold d-block mb-1">Color</label>
+            <div class="d-flex justify-content-center justify-content-md-start">
+              <span
+                class="color-swatch"
+                style="background-color: #6c63ff"
+              ></span>
+              <span class="color-swatch" style="background-color: #000"></span>
+              <span
+                class="color-swatch"
+                style="background-color: #b79042"
+              ></span>
+            </div>
+          </div>
+
+          <!-- Quantity and Buttons -->
+          <div
+            class="d-flex flex-column flex-md-row align-items-center justify-content-center justify-content-md-start mb-4"
+          >
+            <div class="input-group me-md-3 mb-2 mb-md-0" style="width: 100px">
+              <button class="btn btn-outline-secondary">-</button>
+              <input type="text" class="form-control text-center" value="1" />
+              <button class="btn btn-outline-secondary">+</button>
+            </div>
+            <button class="btn btn-dark me-md-2 mb-2 mb-md-0">
+              Add To Cart
+            </button>
+            <button class="btn btn-outline-dark">+ Compare</button>
+          </div>
+
+          <!-- Metadata -->
+          <div class="small text-muted">
+            <p><strong>SKU:</strong> SS001</p>
+            <p><strong>Category:</strong> Sofas</p>
+            <p><strong>Tags:</strong> Sofa, Chair, Home, Shop</p>
+            <p>
+              <strong>Share:</strong>
+              <a href="#" class="text-dark px-2"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a href="#" class="text-dark px-2"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="#" class="text-dark px-2"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="container py-5">
+      <!-- Nav Tabs -->
+      <ul
+        class="nav nav-tabs justify-content-center"
+        id="productTab"
+        role="tablist"
+      >
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active"
+            id="desc-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#desc"
+            type="button"
+            role="tab"
+          >
+            Description
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="info-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#info"
+            type="button"
+            role="tab"
+          >
+            Additional Information
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="reviews-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#reviews"
+            type="button"
+            role="tab"
+          >
+            Reviews [5]
+          </button>
+        </li>
+      </ul>
+
+      <!-- Tab Content -->
+      <div class="tab-content" id="productTabContent">
+        <!-- Description Tab -->
+        <div class="tab-pane fade show active" id="desc" role="tabpanel">
+          <div class="row mb-4">
+            <div class="col-lg-12">
+              <p>
+                Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn
+                portable active stereo speaker takes the unmistakable look and
+                sound of Marshall, unplugs the chords, and takes the show on the
+                road.
+              </p>
+              <p>
+                Weighing in under 7 pounds, the Kilburn is a lightweight piece
+                of vintage styled engineering. Setting the bar as one of the
+                loudest speakers in its class, the Kilburn is a compact,
+                stout-hearted hero with a well-balanced audio which boasts a
+                clear midrange and extended highs for a sound that is both
+                articulate and pronounced. The analogue knobs allow you to fine
+                tune the controls to your personal preferences while the
+                guitar-influenced leather strap enables easy and stylish travel.
+              </p>
+            </div>
+          </div>
+          <div class="row g-4">
+            <div class="col-md-6">
+              <img src="images/single_product/description1.png" alt="Sofa 1" />
+            </div>
+            <div class="col-md-6">
+              <img src="images/single_product/description2.png" alt="Sofa 2" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional Info Tab -->
+        <div class="tab-pane fade" id="info" role="tabpanel">
+          <p>
+            Material: Premium wood frame and high-resilience foam cushions.
+            Warranty: 5 years structural, 2 years fabric.
+          </p>
+        </div>
+
+        <!-- Reviews Tab -->
+        <div class="tab-pane fade" id="reviews" role="tabpanel">
+          <p>★★★★★ Great quality and super comfortable!</p>
+          <p>★★★★☆ Love the design and delivery was fast.</p>
+          <p>★★★★★ Great quality and super comfortable!</p>
+          <p>★★★★☆ Love the design and delivery was fast.</p>
+          <p>★★★★★ Great quality and super comfortable!</p>
+        </div>
+      </div>
+    </div>
+
+    <hr />
 
     <!-- footer -->
 
