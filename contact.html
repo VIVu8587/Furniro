@@ -38,6 +38,25 @@
         height: 30px;
         object-fit: contain;
       }
+      @media (max-width: 768px) {
+        .navbar-collapse {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .navbar-nav {
+          align-items: center;
+        }
+
+        .icon-group {
+          flex-direction: column !important;
+          align-items: center;
+        }
+
+        .icon-group .nav-item {
+          margin-bottom: 10px;
+        }
+      }
     </style>
   </head>
   <body>
