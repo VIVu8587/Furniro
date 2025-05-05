@@ -44,6 +44,67 @@
         background-size: cover;
         height: 40vh;
       }
+
+      .form-section {
+        background-color: #ffffff;
+        padding: 24px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+      }
+
+      h4,
+      h6 {
+        font-weight: 700;
+        font-size: 22px;
+        margin-bottom: 24px;
+      }
+
+      .form-label {
+        font-size: 14px;
+        margin-bottom: 6px;
+      }
+
+      .form-control,
+      .form-select {
+        border-radius: 4px;
+        font-size: 14px;
+        padding: 10px 12px;
+        height: 40px;
+      }
+
+      .order-summary {
+        border-left: 1px solid #e0e0e0;
+      }
+
+      .order-summary .total-price {
+        color: #d89200;
+        font-weight: 700;
+        font-size: 18px;
+      }
+
+      .place-order-btn {
+        border-radius: 50px;
+        padding: 12px 20px;
+        font-size: 14px;
+      }
+
+      .form-check-label {
+        font-size: 13px;
+      }
+
+      .small-text {
+        font-size: 12px;
+        color: #888;
+      }
+
+      @media (max-width: 991px) {
+        .order-summary {
+          border-left: none;
+          border-top: 1px solid #e0e0e0;
+          margin-top: 40px;
+          padding-top: 20px;
+        }
+      }
       .footer {
         background-color: #f8f9fa;
         padding: 40px 20px;
@@ -196,6 +257,135 @@
       </div>
     </div>
 
+    <!-- summary-->
+
+    <div class="container">
+      <div class="row gx-5 gy-5">
+        <!-- Billing Details -->
+        <div class="col-lg-7">
+          <div class="form-section">
+            <h4>Billing details</h4>
+            <form>
+              <div class="row gy-3">
+                <div class="col-md-6">
+                  <label class="form-label">First Name</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Last Name</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Company Name (Optional)</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Country / Region</label>
+                  <select class="form-select">
+                    <option selected>Sri Lanka</option>
+                    <option>India</option>
+                    <option>USA</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Street address</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Town / City</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Province</label>
+                  <select class="form-select">
+                    <option selected>Western Province</option>
+                    <option>Southern Province</option>
+                    <option>Central Province</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">ZIP code</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Phone</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Email address</label>
+                  <input type="email" class="form-control" />
+                </div>
+                <div class="col-12">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Additional Information"
+                  />
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Order Summary -->
+        <div class="col-lg-5">
+          <div class="form-section order-summary">
+            <h6>Product</h6>
+            <div class="d-flex justify-content-between mb-2">
+              <span>Asgaard sofa × 1</span>
+              <span>Rs. 250,000.00</span>
+            </div>
+            <hr />
+            <div class="d-flex justify-content-between mb-2">
+              <strong>Subtotal</strong>
+              <strong>Rs. 250,000.00</strong>
+            </div>
+            <div class="d-flex justify-content-between mb-3">
+              <strong>Total</strong>
+              <span class="total-price">Rs. 250,000.00</span>
+            </div>
+
+            <hr />
+            <div class="form-check mb-3">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="payment"
+                id="bankTransfer"
+                checked
+              />
+              <label class="form-check-label" for="bankTransfer"
+                >Direct Bank Transfer</label
+              >
+              <p class="small-text mt-1">
+                Make your payment directly into our bank account. Use your Order
+                ID as the reference. Orders ship after funds clear.
+              </p>
+            </div>
+
+            <div class="form-check mb-2">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="payment"
+                id="cod"
+              />
+              <label class="form-check-label" for="cod">Cash On Delivery</label>
+            </div>
+
+            <p class="small-text mt-3">
+              Your personal data will be used to support your experience and
+              manage access to your account. See our
+              <a href="#">privacy policy</a>.
+            </p>
+
+            <button class="btn btn-outline-dark w-100 place-order-btn mt-4">
+              Place order
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- footer -->
 
     <footer class="footer">

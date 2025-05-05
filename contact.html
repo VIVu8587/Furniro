@@ -45,6 +45,27 @@
         background-size: cover;
         height: 40vh;
       }
+
+      .contact-section {
+        padding: 40px 20px;
+      }
+      .contact-info h5 {
+        font-weight: bold;
+      }
+      .contact-info p {
+        margin-bottom: 5px;
+      }
+      .form-control::placeholder {
+        color: #999;
+      }
+      .btn-custom {
+        background-color: #c59d2f;
+        color: white;
+        border: none;
+      }
+      .btn-custom:hover {
+        background-color: #a8841f;
+      }
       .footer {
         background-color: #f8f9fa;
         padding: 40px 20px;
@@ -160,7 +181,7 @@
               /></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"
+              <a class="nav-link" href="checkout.html"
                 ><img
                   src="images/home/search.jpg"
                   alt="search"
@@ -196,6 +217,81 @@
       </div>
     </div>
 
+    <div class="container contact-section">
+      <div class="text-center mb-4">
+        <h2 class="fw-bold">Get In Touch With Us</h2>
+        <p class="text-muted small">
+          For More Information About Our Product & Services, Please Feel Free To
+          Drop Us An Email. Our Staff Always Be There To Help You Out. Do Not
+          Hesitate!
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Contact Info -->
+        <div class="col-lg-4">
+          <div class="contact-info">
+            <div class="mb-4">
+              <h5><i class="bi bi-geo-alt-fill me-2"></i>Address</h5>
+              <p>236 5th SE Avenue, New York NY10000, United States</p>
+            </div>
+            <div class="mb-4">
+              <h5><i class="bi bi-telephone-fill me-2"></i>Phone</h5>
+              <p>Mobile: + (84) 546-6789</p>
+              <p>Hotline: + (84) 456-6789</p>
+            </div>
+            <div>
+              <h5><i class="bi bi-clock-fill me-2"></i>Working Time</h5>
+              <p>Monday-Friday: 9:00 - 22:00</p>
+              <p>Saturday-Sunday: 9:00 - 21:00</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="col-lg-8">
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Your name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="Abc"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="Abc@def.com"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="subject" class="form-label">Subject</label>
+              <input
+                type="text"
+                class="form-control"
+                id="subject"
+                placeholder="This is an optional"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea
+                class="form-control"
+                id="message"
+                rows="4"
+                placeholder="Hi! I'd like to ask about..."
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-custom px-4">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
     <!-- footer -->
 
     <footer class="footer">
